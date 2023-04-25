@@ -1,18 +1,23 @@
 import React from "react";
 import background from "../../assets/logo-blackTheme.webp";
 import { CartWidget } from "../CartWidget/carroDeCompras";
-const NavBar = () => {
+import { Link, NavLink, useParams } from "react-router-dom";
+
+export const NavBar = () => {
   return (
+
     <nav>
       <div style={{display: "flex", justifyContent: `space-between`}}>
+        < Link to= '/' >
         <div style={{ backgroundImage: `url(${background})`, width: `150px`, height: `65px`, backgroundRepeat: `no-repeat`, backgroundSize: `cover`, marginLeft: `2vw` }}/>
+        </ Link >
+        
           <div style={{display: `flex`, alignItems: `center`, flexDirection: `row`}}>
             <ul>
               <div style={{display: `flex`}}>
                 <li><button>Marcas</button></li>
                 <li><button>Categorias</button></li>
                 <li><button>Ofertas</button></li>
-                <li><button>Contacto</button></li>
               </div>
             </ul>
           </div>
@@ -22,4 +27,3 @@ const NavBar = () => {
   )
 }
 
-export {NavBar} 
