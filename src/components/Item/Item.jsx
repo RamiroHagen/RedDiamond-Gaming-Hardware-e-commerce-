@@ -1,28 +1,21 @@
 import { useEffect, useState } from "react"
 import { Link } from "react-router-dom"
+import 'bootstrap/dist/css/bootstrap.min.css'
+import './Item.css'
+
 
 const Item = ({producto: {id, foto, name, price, categoria}}) => {
     return(
-    <div style={{
-        display: "flex",
-        flexDirection: 'row',
-        flexWrap: "wrap"
-    }}>
-
-        <div key={id} className="card w-25">
-        <img src={foto} className="card-img-top" alt="imagen-card" />
-        <div className="card-body">
-            <h6>Nombre: {name}</h6>
-            <label>Precio: {price}</label>
-            <label>Categoria: {categoria}</label>
-        </div>
-            <div className="card-footer">
-            < Link to={`/detail/${id}`} >
-                <button className="btn btn-outline-dark">Detalle</button>
-            </ Link >
+        < Link to={`/detail/${id}`} >
+            <div key={id} className="card items">
+                <img src={foto} className="card-img-top imagenes" alt="imagen-card" />
+                <div className="card-body">
+                    <h6>{name}</h6>
+                    <label>Precio: {price}</label>
+                    <label>Categoria: {categoria}</label>
+                </div>
             </div>
-        </div>
-    </div>
+         </ Link >
     )
 }
   export { Item }

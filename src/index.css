@@ -18,11 +18,11 @@
 
 a {
   font-weight: 500;
-  color: #64ff71;
-  text-decoration: inherit;
+  color: white;
+  text-decoration: none;
 }
 a:hover {
-  color: #d64848;
+  color: #b6b1b1;
 }
 
 body {

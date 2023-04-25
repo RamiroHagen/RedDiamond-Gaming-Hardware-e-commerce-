@@ -12,7 +12,7 @@ export const ItemDetailContainer = () => {
 
     useEffect(() =>{
         mFetch(pid)
-        .then(resp => console.log(resp))
+        .then(resp => setProducto(resp))
         .catch(err => console.log(err))
         .finally(() => setIsLoading(false))
     }, [])

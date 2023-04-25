@@ -3,6 +3,7 @@ import { mFetch } from "./asyncMock"
 import { Link, useParams} from "react-router-dom"
 import { ItemDetail } from "../ItemDetail/ItemDetail"
 import { ItemList } from "../ItemList/ItemList"
+import './ItemListContainer.css'
 
 
 

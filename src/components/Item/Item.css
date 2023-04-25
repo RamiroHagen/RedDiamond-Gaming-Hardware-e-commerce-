@@ -1,0 +1,14 @@
+.items{
+    background-color:  #717070;
+    width: 22vw;
+    height: 69vh;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    text-decoration: none !important;
+}
+
+.imagenes{
+    height: 65%;
+    width: 100%;
+    object-fit:fill;
+}
