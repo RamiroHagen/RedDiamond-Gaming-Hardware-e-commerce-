@@ -1,28 +1,113 @@
+body{
+    color: white;
+}
+
 .detalle{
     display: grid;
-    grid-template-columns: 40% 30% 30%;
+    grid-template-columns: 30% 40% 30%;
+    margin-top: 20px;
     padding-left: 20px;
     padding-right: 20px;
 }
 
 .caja1{
     width: 350px;
-    height: 75vh;
-    background-color: aquamarine;
+    height: 70vh;
+
 }
 
 .caja2{
-    width: 100px;
-    background-color: aquamarine;
+    width: 520px;
+    background-color: rgba(255, 255, 255, 0);
+    border-radius: 6px;
+    text-align: start;
 }
 
 .caja3{
-    width: 100px;
-    background-color: aquamarine;
+    margin-left: 4vw;
+    width: auto;
+    background-color: rgba(255, 255, 255, 0);
+    box-shadow: -5px 5px 5px rgba(30, 30, 30, 0.75);  
 }
 
 .imagenDetail{
     width: 100%;
     height: 100%;
     object-fit: cover;
+}
+
+h2{
+    padding-top: 2vh;
+}
+
+h4{
+    font-size: medium !important ;
+    margin-top: 22px !important;
+    line-height: 0 !important;
+}
+
+h5{
+    font-size: small !important;
+}
+
+p{
+    font-size: small;
+}
+
+.pieTitulo{
+    display: flex;
+    flex-direction: row;
+
+}
+
+.box1{
+    width:8vw;
+    margin: 5px;
+    height: 46px;
+    padding-top: 5px;
+    padding-left: 8px;
+    background-color: rgb(30, 30, 30);
+}
+
+.medios{
+    margin-top: 2vh;
+}
+
+
+.box2{
+    background-color: rgb(0, 0, 0);
+    width: 37vw;
+    margin: 8px;
+    padding-left: 15px;
+    display: flex;
+    align-items: center;
+
+}
+
+.icon-medios{
+    width: 36px;
+    height: 36px;
+    margin-right: 15px;
+}
+
+.boxPrecio{
+    width: 82%;
+    text-align: start;
+    padding-left: 2vw;
+    padding-right: 50px;
+    padding-bottom: 1.5vh;
+    background-color: rgb(0, 0, 0);
+    margin-bottom: 4vh;
+    margin-left: 2.2vw;
+}
+
+.textPrecio{
+    color: red;
+}
+
+.whatsapp-button{
+    margin-top: 10px;
+    width: 275px;
+    height: 50px;
+    background-color: rgb(107, 215, 97);
 }

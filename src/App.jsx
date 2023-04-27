@@ -2,7 +2,6 @@ import { userRef, useState, useEffect } from 'react'
 import './App.css'
 import ItemListContainer from './components/ItemListContainer/ItemsListContainer'
 import { NavBar } from './components/NavBar/NavBar'
-import ItemContador from './components/ItemCount/ItemContador'
 import { ItemDetailContainer } from './components/ItemDetailContainer/ItemDetailContainer'
 import { Navigate, Route, BrowserRouter as Router, Routes } from 'react-router-dom'
 
@@ -36,8 +35,6 @@ function App() {
 
           <Route path='*' element={ <Navigate to='/' /> } />            
         </Routes>
-
-      < ItemContador />
       {/* <Footer /> */}
     </Router>            
   )
