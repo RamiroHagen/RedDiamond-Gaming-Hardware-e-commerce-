@@ -7,11 +7,11 @@ const ItemContador = ({inital=1, stock=5, onAdd }) => {
     
     return (
     <>
-        <button onClick={sumaContador}> + </button>
+        <button className='button-contador' onClick={sumaContador}> + </button>
         <label>{counter}</label>
-        <button onClick={restaContador}> - </button>
+        <button className='button-contador' onClick={restaContador}> - </button>
 
-        <button>Agregar al Carrito</button>
+        <button className='agregarCarritoText'>Agregar al Carrito</button>
     </>
     )
 }

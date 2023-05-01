@@ -3,6 +3,7 @@ import { mFetch } from "./asyncMock"
 import { Link, useParams} from "react-router-dom"
 import { ItemList } from "../ItemList/ItemList"
 import './ItemListContainer.css'
+import { Categorias } from "../Categorias/Categorias"
 
 
 
@@ -29,7 +30,7 @@ export const ItemListContainer = ({greeting}) => {
             mFetch()
             // .then(res => res.json())
             .then( resultado=> { 
-                setProductos(resultado.filter(producto => producto.categoria === categoria))
+                setProductos(resultado.filter(productos => productos.categoria === categoria))
             })
             // .then(resul => console.log(resul))
             .catch( error => console.log(error) )
@@ -44,8 +45,14 @@ export const ItemListContainer = ({greeting}) => {
 return (    
   isLoading ?
         <h2>Cargando...</h2>
-    : 
+    :
+
+    <div style={{display: "grid", gridTemplateColumns: '30% 65%', margin: '5vw',}}>  
+        < Categorias />
+    
         < ItemList productos={productos} />
+    </div>
+        
    )
 }
 

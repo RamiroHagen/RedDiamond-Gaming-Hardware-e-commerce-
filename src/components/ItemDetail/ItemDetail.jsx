@@ -1,17 +1,14 @@
 import React from 'react'
 import './ItemDetail.css'
 import ItemContador from '../../components/ItemCount/ItemContador'
+import { RuteoContainer } from '../RuteoContainer/RuteoContainer'
+import { ItemDescription } from './ItemDescription'
 
 const ItemDetail = ({producto}) => {
   return (
     <>
-    <div>
-      <h3>BUSCADOR</h3>
-    </div>
 
-    <div>
-      <h3>categorias</h3>
-    </div>
+    <RuteoContainer/>
 
       <div className="detalle">
         <div className="caja1">
@@ -66,12 +63,25 @@ const ItemDetail = ({producto}) => {
           < ItemContador />
 
           <button className='whatsapp-button'>
-            <img src="" alt="" />
-            <p>Enviar mensaje</p>
+            <div className='d-flex justify-content-center'>
+              <img className='icon-wp' src="../../../public/img/icons/whatsapp.svg" alt="whatsapp-icon" />
+              <p className='text-medium'>Enviar mensaje</p>
+            </div>
           </button>
+
+          <p style={{textAlign: 'start', marginLeft: '28px', marginBottom: '10px', marginTop: '30px'}}>ENVIAMOS TU PEDIDO</p>
+          <div>
+            <div className='boxEnviamosTuPedido'>Hola </div>
+            <div className='boxEnviamosTuPedido'>hola </div>
+            <div className='boxEnviamosTuPedido'>hola </div>
+            <div className='boxEnviamosTuPedido'>hola</div>
+            <div className='boxEnviamosTuPedido'>hola </div>
+          </div>
 
         </div>
       </div>
+
+      < ItemDescription producto = {producto} />
     </>
   )
 }

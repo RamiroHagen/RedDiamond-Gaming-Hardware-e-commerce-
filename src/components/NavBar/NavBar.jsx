@@ -15,9 +15,11 @@ export const NavBar = () => {
           <div style={{display: `flex`, alignItems: `center`, flexDirection: `row`}}>
             <ul>
               <div style={{display: `flex`}}>
-                <li><button>Marcas</button></li>
-                <li><button>Categorias</button></li>
+                <Link to='/products'>
+                <li><button>Productos</button></li>
+                </Link>
                 <li><button>Ofertas</button></li>
+                <li><button>Contacto</button></li>
               </div>
             </ul>
           </div>

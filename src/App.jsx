@@ -2,10 +2,16 @@ import { userRef, useState, useEffect } from 'react'
 import './App.css'
 import ItemListContainer from './components/ItemListContainer/ItemsListContainer'
 import { NavBar } from './components/NavBar/NavBar'
+import { BuscadorContainer } from './components/BuscadorContainer/BuscadorContainer'
+import { Menu } from './components/Menu/Menu'
 import { ItemDetailContainer } from './components/ItemDetailContainer/ItemDetailContainer'
+import { Banner } from './components/Banner/Banner'
+import { Footer } from './components/Footer/Footer'
 import { Navigate, Route, BrowserRouter as Router, Routes } from 'react-router-dom'
 
 import 'bootstrap/dist/css/bootstrap.min.css'
+
+
 
 
 
@@ -16,16 +22,22 @@ function App() {
   return (
     <Router>
       < NavBar />
+      < BuscadorContainer />
 
         <Routes>
           <Route 
             path='/' 
-            element={<ItemListContainer />} 
+            element={< Menu />} 
           />
         
           <Route 
-            path='/categoria/:categoria' 
+            path='/products'
             element={<ItemListContainer />} 
+          />
+
+          <Route
+          path='/categorias/:categoria' 
+          element={< ItemListContainer />}
           />
 
           <Route 
@@ -35,7 +47,9 @@ function App() {
 
           <Route path='*' element={ <Navigate to='/' /> } />            
         </Routes>
-      {/* <Footer /> */}
+
+      < Banner />  
+      < Footer />
     </Router>            
   )
 }

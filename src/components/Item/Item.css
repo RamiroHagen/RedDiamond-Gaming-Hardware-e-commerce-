@@ -1,14 +1,41 @@
 .items{
-    background-color:  #717070;
-    width: 22vw;
-    height: 69vh;
-    margin-top: 10px;
-    margin-bottom: 10px;
+    display: flex;
+    flex-direction: row;
+    background-color: rgb(54, 54, 54);
+    width: auto;
+    height: 18vh;
+    margin-top: 5px;
+    margin-bottom: 14px;
     text-decoration: none !important;
 }
 
 .imagenes{
-    height: 65%;
-    width: 100%;
-    object-fit:fill;
+    height: 95%;
+    width: 11vw;
+    object-fit: fill;
+    margin-right: 15px;
+}
+
+h5{
+    text-align: start;
+}
+
+.categorias{
+    height: 75vh;
+    margin-right: 3vw;
+    background-color: black;
+}
+
+.button-verMas{
+    width: 100px;
+    height: 44px;
+    margin-left: 10px;
+}
+
+.button-verMas:hover {
+    background-color: rgb(26, 26, 26);
+    border-color: rgba(0, 0, 0, 0);
+    border-width: 0px;
+    color: rgb(255, 255, 255);
+    transition: 0.5s;
 }
