@@ -1,6 +1,6 @@
 
 let productos = [
-    { id: '1' ,categoria: 'perifericos', name: "Auricular Redragon H320W Lamia 2 RGB White", stock:50, price: '$17.999', foto: '../../../public/img/Perifericos/auricularesRDblancos.jpg', colores:[{nombre:'rojo', clase:''}] },
+    { id: '1' ,categoria: 'perifericos', name: "Auricular Redragon H320W Lamia 2 RGB White", stock:50, price: '$17.999', foto: '../../../public/img/Perifericos/auricularesRDblancos.jpg', descripcion:"La silla Gamer Argentina cuenta con más acolchado y más comodidad para mantenerte jugando o trabajando durante más tiempo Tejido de malla transpirable Esta silla Gamer está tapizada con tela de malla transpirable en los lugares que más lo necesita, el centro del asiento desde la espalda hasta las piernas. Otros puntos táctiles están tapizados en piel sintética para una sensación suave con durabilidad." },
     { id: '2' ,categoria: 'perifericos', name: "Barra de sonido Netmak Hunter RGB USB 2.0 NM-HUNTER", stock:50, price: 27, foto: '../../../public/img/Perifericos/barraSonidoNetmak.jpg'  },
     { id: '3' ,categoria: 'sillasGamer', name: "Silla Aerocool ThunderX3 TC5 Bumblebee Yellow", stock:50, price: 40, foto:'../../../public/img/sillasGamers/sillaAmarilla.jpg' },
     { id: '4' ,categoria: 'sillasGamer',  name: "Silla Panacom Gamer GM-9974CH - Negro y Azul", stock:50, price: 55, foto:'../../../public/img/sillasGamers/sillaAzul.jpg' },

@@ -13,11 +13,13 @@ body{
 .caja1{
     width: auto;
     height: 70vh;
+    background-color: white;
+    margin-left: 1vw;
 
 }
 
 .caja2{
-    margin-left: 1vw;
+    margin-left: 2vw;
     width: 520px;
     background-color: rgba(255, 255, 255, 0);
     border-radius: 6px;
@@ -25,6 +27,7 @@ body{
 }
 
 .caja3{
+    padding-bottom: 25px;
     margin-left: 4vw;
     width: auto;
     background-color: rgba(255, 255, 255, 0);
@@ -35,6 +38,7 @@ body{
     max-width: 95%;
     height: 90%;
     object-fit: cover;
+
 }
 
 h2{
@@ -117,7 +121,7 @@ p{
 
 .textPrecio{
     margin-top: 10px;
-    color: red;
+    color: rgb(255, 255, 255);
 }
 
 .whatsapp-button{
@@ -136,17 +140,16 @@ p{
 .agregarCarritoText{
     background-color: rgb(0, 0, 0);
     font-size: small;
-    color: red;
+    color: white;
     margin-left: 5px;   
     border-radius: 0;
     height: 50px;
   }
   
 .agregarCarritoText:hover {
-    background-color: rgb(20, 20, 20);
     border-color: rgba(0, 0, 0, 0);
     border-width: 0px;
-    color: rgb(255, 255, 255);
+    color: red;
     transition: 0.5s;
 }
   
@@ -171,10 +174,28 @@ p{
 
 .boxEnviamosTuPedido{
     width: 84%;
-    height: 10vh;
+    height: 11vh;
     margin-top: 5px;
     margin-left: 2vw;
-
+    padding-top: 0.5px;
     background-color: rgb(54, 54, 54);
 }
 
+.box-description{
+    width: 75%;
+    height: 60vh;
+    margin-top: 4vh;
+    padding-left: 4vw;
+    padding-right: 4vw;
+    text-align: start;
+    box-shadow: -5px 5px 5px rgb(30, 30, 30);  
+}
+
+.subrrallado{
+    background-color:  rgb(54, 54, 54);
+    height: 3px;
+    margin-top: -2px;
+    margin-left: 23.38vw;
+    width: 250px;
+    margin-bottom: 5vh;
+}

@@ -1,8 +1,13 @@
 import React from 'react'
+import './NovedadesContainer.css'
 
 const NovedadesContainer = () => {
   return (
-    <div>NovedadesContainer</div>
+    <div className='novedades'>
+
+      NovedadesContainer
+      
+    </div>
   )
 }
 

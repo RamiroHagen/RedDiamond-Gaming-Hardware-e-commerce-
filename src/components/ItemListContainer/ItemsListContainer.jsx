@@ -4,10 +4,10 @@ import { Link, useParams} from "react-router-dom"
 import { ItemList } from "../ItemList/ItemList"
 import './ItemListContainer.css'
 import { Categorias } from "../Categorias/Categorias"
+import { RuteoContainer } from "../RuteoContainer/RuteoContainer"
 
 
-
-export const ItemListContainer = ({greeting}) => {
+export const ItemListContainer = ({producto}) => {
    const [productos, setProductos] = useState([])
    const [isLoading, setIsLoading] = useState(true)
 
@@ -46,12 +46,11 @@ return (
   isLoading ?
         <h2>Cargando...</h2>
     :
-
-    <div style={{display: "grid", gridTemplateColumns: '30% 65%', margin: '5vw',}}>  
-        < Categorias />
-    
-        < ItemList productos={productos} />
-    </div>
+        <div style={{display: "grid", gridTemplateColumns: '30% 65%', margin: '5vw',}}>  
+            < Categorias />
+        
+            < ItemList productos={productos} />
+        </div>
         
    )
 }

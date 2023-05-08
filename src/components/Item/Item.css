@@ -3,27 +3,45 @@
     flex-direction: row;
     background-color: rgb(54, 54, 54);
     width: auto;
-    height: 18vh;
+    height: 23vh;
     margin-top: 5px;
     margin-bottom: 14px;
     text-decoration: none !important;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 6px;
+    padding-right: 10px;
 }
 
 .imagenes{
-    height: 95%;
-    width: 11vw;
-    object-fit: fill;
+    aspect-ratio: 3/2;
+    object-fit: contain;
     margin-right: 15px;
+    background-color: white;
+    border-radius: 2px;
 }
 
-h5{
+h6{
     text-align: start;
+    font-size: x-large;
+    font-weight: 1;
+}
+
+.precio{
+    text-align: start;
+    width: 50%;
+    margin-top: 5px;
+    font-size: large;
+    color: rgb(255, 255, 255);
+    font-weight: 100;
+    background-color: rgb(54, 54, 54);
 }
 
 .categorias{
     height: 75vh;
     margin-right: 3vw;
     background-color: black;
+    border-radius: 3px;
 }
 
 .button-verMas{
@@ -39,3 +57,22 @@ h5{
     color: rgb(255, 255, 255);
     transition: 0.5s;
 }
+
+.box-item-stock{
+    display: flex;
+    flex-direction: row;
+    margin: 5px;
+    height: 15px;
+    padding-left: 8px;
+    background-color: rgba(255, 255, 255, 0);
+}
+
+.detalle-precio-item{
+    height: 3px;
+    width: 50%;
+    margin-top: -16px;
+    margin-left: 8px;
+    background-color: #1f1f1f;
+    border-radius: 2px;
+}
+

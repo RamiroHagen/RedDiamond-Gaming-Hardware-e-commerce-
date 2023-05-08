@@ -1,0 +1,21 @@
+.ruteo{
+    display: flex;
+    flex-direction: row;
+    margin-left: 1.7vw;
+    margin-top: 3vh;
+}
+
+.box-ruteo{
+    background-color: black;
+    margin-left: 10px;
+    padding-left: 12px;
+    padding-right: 12px;
+    border-radius: 1em 3em;
+    color: red;
+    font-size: small;
+}
+
+.box-name{
+    margin-left: 12px;
+    font-size: small;
+}

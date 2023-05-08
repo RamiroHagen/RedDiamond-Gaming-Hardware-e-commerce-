@@ -8,7 +8,7 @@ const ItemDetail = ({producto}) => {
   return (
     <>
 
-    <RuteoContainer/>
+    <RuteoContainer producto = {producto}/>
 
       <div className="detalle">
         <div className="caja1">
@@ -71,11 +71,26 @@ const ItemDetail = ({producto}) => {
 
           <p style={{textAlign: 'start', marginLeft: '28px', marginBottom: '10px', marginTop: '30px'}}>ENVIAMOS TU PEDIDO</p>
           <div>
-            <div className='boxEnviamosTuPedido'>Hola </div>
-            <div className='boxEnviamosTuPedido'>hola </div>
-            <div className='boxEnviamosTuPedido'>hola </div>
-            <div className='boxEnviamosTuPedido'>hola</div>
-            <div className='boxEnviamosTuPedido'>hola </div>
+            <div className='boxEnviamosTuPedido'>
+            <h4 style={{fontWeight:'1'}}>Retiro en sucursal Andreani</h4>
+                <p>$1.000</p>
+            </div>
+            <div className='boxEnviamosTuPedido'>
+            <h4 style={{fontWeight:'1'}}>Envio a domicilio Andreani</h4>
+                <p>$2.000</p>
+            </div>
+            <div className='boxEnviamosTuPedido'>
+            <h4 style={{fontWeight:'1'}}>A domicilio (Monitores)</h4>
+                <p>$2.800</p>
+            </div>
+            <div className='boxEnviamosTuPedido'>
+            <h4 style={{fontWeight:'1'}}>A domicilio (Sillas)</h4>
+                <p>$4.500</p>
+            </div>
+            <div className='boxEnviamosTuPedido'>
+            <h4 style={{fontWeight:'1'}}>A domicilio (Gabinetes)</h4>
+                <p>$2.800</p>
+            </div>
           </div>
 
         </div>
