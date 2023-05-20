@@ -1,13 +1,12 @@
 import React from 'react'
 import './ItemDetail.css'
-import ItemContador from '../../components/ItemCount/ItemContador'
 import { RuteoContainer } from '../RuteoContainer/RuteoContainer'
 import { ItemDescription } from './ItemDescription'
+import { Contador } from '../ItemCount/Contador'
 
 const ItemDetail = ({producto}) => {
   return (
     <>
-
     <RuteoContainer producto = {producto}/>
 
       <div className="detalle">
@@ -60,7 +59,7 @@ const ItemDetail = ({producto}) => {
           </div>
 
           <p style={{textAlign: 'start', marginLeft: '28px', marginBottom: '6px'}}>CANTIDAD</p>
-          < ItemContador />
+          < Contador producto = {producto}/>
 
           <button className='whatsapp-button'>
             <div className='d-flex justify-content-center'>

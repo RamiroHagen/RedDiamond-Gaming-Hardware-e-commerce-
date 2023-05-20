@@ -5,6 +5,7 @@ import { ItemList } from "../ItemList/ItemList"
 import './ItemListContainer.css'
 import { Categorias } from "../Categorias/Categorias"
 import { RuteoContainer } from "../RuteoContainer/RuteoContainer"
+import { Loading } from "../Loading/Loading"
 
 
 export const ItemListContainer = ({producto}) => {
@@ -44,7 +45,7 @@ export const ItemListContainer = ({producto}) => {
    // [1,2,3,4,5,6,7] <- map <- [<li key=1 >1</li>, <li key=2 >2</li>, <li key=3 >3</li>, ....]
 return (    
   isLoading ?
-        <h2>Cargando...</h2>
+        <Loading/>
     :
         <div style={{display: "grid", gridTemplateColumns: '30% 65%', margin: '5vw',}}>  
             < Categorias />

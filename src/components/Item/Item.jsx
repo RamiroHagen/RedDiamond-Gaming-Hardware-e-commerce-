@@ -19,7 +19,6 @@ const Item = ({producto: {id, foto, name, price, categoria}}) => {
                     <div className="detalle-precio-item">
                     </div>
                 </div>
-
             </div>
          </ Link >
     )

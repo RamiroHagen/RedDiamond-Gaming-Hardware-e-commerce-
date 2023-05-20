@@ -2,6 +2,7 @@ import { useParams } from "react-router-dom"
 import { ItemDetail } from "../ItemDetail/ItemDetail"
 import { useEffect, useState } from "react"
 import { mFetch } from "../ItemListContainer/asyncMock"
+import { Loading } from "../Loading/Loading"
 
 export const ItemDetailContainer = () => {
     // Estado para guardar un product
@@ -21,7 +22,7 @@ export const ItemDetailContainer = () => {
     return (
         <div>
             {isLoading ? 
-                <h2>cargando..</h2>
+                <Loading/>
                 :
                 <ItemDetail producto = {producto}/>
             }

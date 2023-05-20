@@ -3,19 +3,21 @@
     flex-direction: row;
     background-color: rgb(54, 54, 54);
     width: auto;
-    height: 4%;
-    margin-top: 5px;
+    height: 3%;
+    margin-top: 40px;
     margin-bottom: 14px;
     text-decoration: none !important;
     padding-top: 5px;
     padding-bottom: 5px;
     padding-left: 6px;
     padding-right: 10px;
+    margin-left: 40px;
+    margin-right: 40px;
 }
 
 .imagenes{
-    aspect-ratio: 3/11;
-    object-fit: contain;
+width: 200px;
+
     margin-right: 15px;
     background-color: white;
     border-radius: 2px;

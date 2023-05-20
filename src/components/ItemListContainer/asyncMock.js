@@ -16,6 +16,6 @@ export const mFetch = (id) =>{
         // rechazado("No te puedo devolver la plata")
         setTimeout(()=>{
             res(!id ? productos : productos.find( productos => productos.id === id))
-        }, 1000)
+        }, 1295)
     }) 
 } 

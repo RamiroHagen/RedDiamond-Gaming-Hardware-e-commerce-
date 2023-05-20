@@ -15,15 +15,25 @@ export const NavBar = () => {
           <div style={{display: `flex`, alignItems: `center`, flexDirection: `row`}}>
             <ul>
               <div style={{display: `flex`}}>
+                
+                <Link to='/'>
+                <li><button>Inicio</button></li>
+                </Link>
+
                 <Link to='/products'>
                 <li><button>Productos</button></li>
                 </Link>
-                <li><button>Ofertas</button></li>
+                
                 <li><button>Contacto</button></li>
+
               </div>
             </ul>
           </div>
-          <CartWidget />
+
+          <Link to='/cart'>
+            <CartWidget />
+          </Link>
+
       </div>
     </nav>
   )
