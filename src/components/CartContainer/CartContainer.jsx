@@ -112,16 +112,17 @@ export const CartContainer = () => {
                                 <p style={{marginRight:'10px', marginTop:'-2px'}}>Stock</p>
                                 <h5 style={{color: 'rgb(107, 215, 97)'}}>DISPONIBLE</h5>
                             </div>  
-                            <p className="precio">{product.price}</p>
-                            <p className="precio">CANTIDAD:{product.cantidad}</p>
+                            <p className="precio">${product.price}</p>
+                            <p className="precio">CANTIDAD: {product.cantidad}</p>
+                            <button onClick={()=> eliminarProducto(product.id)} className="eliminar"> X </button>
                             <div className="detalle-precio-item">
-                              <button onClick={()=> eliminarProducto(product.id)}> X </button>
                             </div>
                         </div>
                     </div>
         ))}
-            <h2>Total : ${precioTotal()}</h2>
-            <button onClick={vaciarCarrito}> Vaciar el Carrito </button>
+            <button className='vaciarCarro' onClick={vaciarCarrito}> Vaciar el Carrito </button>
+
+            <h2 className='precioTotal'>Total: ${precioTotal()}</h2>
 
             <form onSubmit={generarOrden}> 
                 <input 
@@ -150,12 +151,11 @@ export const CartContainer = () => {
             </form>
       </>
 
-      :
-          <div><p>no hay productos en el carrito aun!</p>
-            <Link to='/products'>Ver todos los Productos</Link>
+        :
+          <div>
+            <h2 className='tituloCarritoVacio'>Ups.. No hay productos en el carrito aún!</h2>
+            <Link to='/products' className='volver'>Ir al catalogo de productos</Link>
           </div>
-
-        }
-    </div>
-  )
-      }
+        }   
+        </div>)
+    }

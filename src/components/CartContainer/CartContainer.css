@@ -3,7 +3,7 @@
     flex-direction: row;
     background-color: rgb(54, 54, 54);
     width: auto;
-    height: 3%;
+    height: auto;
     margin-top: 40px;
     margin-bottom: 14px;
     text-decoration: none !important;
@@ -16,8 +16,19 @@
 }
 
 .imagenes{
-width: 200px;
+    width: 200px;
+    height: 180px;
+    margin-right: 20px;
+    margin-left: 2px;
+    background-color: white;
+    border-radius: 2px;
+}
 
+.imagenesProductos{
+    width: 26%;
+    height: 27.5vh;
+    aspect-ratio: 3/2;
+    object-fit: contain;
     margin-right: 15px;
     background-color: white;
     border-radius: 2px;
@@ -30,9 +41,8 @@ h6{
 }
 
 .precio{
-    text-align: start;
-    width: 50%;
-    margin-top: 5px;
+    width: 25vw;
+    margin-top: 5vh;
     font-size: large;
     color: rgb(255, 255, 255);
     font-weight: 100;
@@ -44,6 +54,14 @@ h6{
     margin-right: 3vw;
     background-color: black;
     border-radius: 3px;
+}
+
+.eliminar{
+    position: absolute;
+    margin-left: 74vw;
+    margin-top: 10vh;
+    width: 55px;
+    height: 55px;
 }
 
 .button-verMas{
@@ -71,10 +89,37 @@ h6{
 
 .detalle-precio-item{
     height: 3px;
-    width: 50%;
-    margin-top: -16px;
+    width: 55vw;
+    margin-top: -1vh;
     margin-left: 8px;
     background-color: #1f1f1f;
     border-radius: 2px;
 }
 
+.detalle-precio-item-Productos{
+    height: 3px;
+    width: 17vw;
+    margin-top: -1vh;
+    margin-left: 8px;
+    background-color: #1f1f1f;
+    border-radius: 2px;
+}
+
+.precioTotal{
+    margin-top: 8vh;
+    margin-bottom: 15vh;
+}
+
+.vaciarCarro{
+    margin-top: 2vh;
+    height: 10vh;
+}
+
+.tituloCarritoVacio{
+    margin-top: 7vh;
+    margin-bottom: 5vh;
+}
+
+.volver{
+    font-size: larger;
+}

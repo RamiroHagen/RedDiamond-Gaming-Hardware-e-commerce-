@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import ItemContador from './ItemContador'
 import { Link, NavLink, useParams } from "react-router-dom"
 import { useCartContext } from '../../context/CartContext'
+import './Contador.css'
 
 export const Contador = ({producto}) => {
     const [isCant, setIsCant] = useState(false)
@@ -23,8 +24,10 @@ export const Contador = ({producto}) => {
                 <ItemContador onAdd={onAdd}/>
                 :
                 <> 
-                    <Link to= {'/cart'} className='button-contador'> Terminar Compra </Link>
-                    <Link to= {'/products'} className='button-contador'> Seguir Comprando </Link>
+                    <div className='d-flex align-items-center row'>
+                        <Link to= {'/cart'} className='button-carrito'> Terminar Compra </Link>
+                        <Link to= {'/products'} className='button-carrito'> Seguir Comprando </Link>
+                    </div>
                 </>
         }
 
