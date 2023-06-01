@@ -24,8 +24,10 @@ export const NavBar = () => {
                 <li><button>Productos</button></li>
                 </Link>
                 
+                <Link to='/contact'>
                 <li><button>Contacto</button></li>
-
+                </Link>
+                
               </div>
             </ul>
           </div>

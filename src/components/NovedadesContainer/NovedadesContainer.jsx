@@ -1,12 +1,16 @@
 import React from 'react'
 import './NovedadesContainer.css'
 
-const NovedadesContainer = () => {
+const NovedadesContainer = ({productos}) => {
   return (
     <div className='novedades'>
 
-      NovedadesContainer
-      
+{/*       <div>
+        {productos.map( producto => 
+          <Item key={producto.id} producto={producto}/>
+        )}  
+      </div>
+       */}
     </div>
   )
 }

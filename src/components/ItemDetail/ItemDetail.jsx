@@ -53,7 +53,7 @@ const ItemDetail = ({producto}) => {
         </div>
         <div className="caja3">
           <div className='boxPrecio'>
-            <h2 style={{color: 'red'}}>{producto.price}<br/>
+            <h2 style={{color: 'red'}}>${producto.price}<br/>
               <p className='textPrecio'>PRECIO ESPECIAL EFECTIVO, TRANSFERENCIA O DEPOSITO</p>
             </h2>
           </div>

@@ -15,7 +15,7 @@ const Item = ({producto: {id, foto, name, price, categoria}}) => {
                         <p style={{marginRight:'10px', marginTop:'-2px'}}>Stock</p>
                         <h5 style={{color: 'rgb(107, 215, 97)'}}>DISPONIBLE</h5>
                     </div>  
-                    <p className="precio">{price}</p>
+                    <p className="precio">${price}</p>
                     <div className="detalle-precio-item">
                     </div>
                 </div>

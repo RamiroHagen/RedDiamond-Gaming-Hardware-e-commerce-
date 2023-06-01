@@ -1,48 +1,45 @@
 import { useEffect, useState } from "react"
-import { mFetch } from "./asyncMock"
 import { Link, useParams} from "react-router-dom"
 import { ItemList } from "../ItemList/ItemList"
 import './ItemListContainer.css'
 import { Categorias } from "../Categorias/Categorias"
 import { RuteoContainer } from "../RuteoContainer/RuteoContainer"
 import { Loading } from "../Loading/Loading"
+import { collection, doc, getDoc, getDocs, getFirestore, limit, orderBy, query, where } from 'firebase/firestore'
 
-
-export const ItemListContainer = ({producto}) => {
+export const ItemListContainer = ({greetins}) => {
    const [productos, setProductos] = useState([])
+   const [producto, setProducto] = useState({})
    const [isLoading, setIsLoading] = useState(true)
 
    const { categoria } = useParams() // pid
     // UseEffect -> traer un proudcto por pid -> guardar en el estado
+    useEffect(()=>{
+        const dbFirestore     = getFirestore()
+        const queryCollection = collection(dbFirestore, 'Productos')
+
+        if (!categoria) {  
+            getDocs(queryCollection)
+                .then(res => setProductos(  res.docs.map(producto => ( { id: producto.id, ...producto.data() } )) ))
+                .catch( error => console.log(error) )
+                .finally(()=> setIsLoading(false))
+        }else{
+            const queryCollectionFiltered = query(
+                queryCollection, 
+                where('categoria','==', categoria),
+                // orderBy('price', 'asc'),
+                // limit(1)
+            )
+    
+            getDocs(queryCollectionFiltered)
+                .then(res => setProductos(  res.docs.map(producto => ( { id: producto.id, ...producto.data() } )) ))
+                .catch( error => console.log(error) )
+                .finally(()=> setIsLoading(false))
+        }
+    }, [categoria])
 
     console.log(categoria)
 
-   useEffect(()=>{
-        if (!categoria){
-            mFetch()
-            // .then(res => res.json())
-            .then( resultado=> { 
-                setProductos(resultado)
-            })
-            // .then(resul => console.log(resul))
-            .catch( error => console.log(error) )
-            .finally(()=> setIsLoading(false))
-        }else{
-            mFetch()
-            // .then(res => res.json())
-            .then( resultado=> { 
-                setProductos(resultado.filter(productos => productos.categoria === categoria))
-            })
-            // .then(resul => console.log(resul))
-            .catch( error => console.log(error) )
-            .finally(()=> setIsLoading(false))
-        }
-   }, [categoria])
-
-   console.log(productos)
-
-   //map <- nuevo array transformadio mediante una función transformadora
-   // [1,2,3,4,5,6,7] <- map <- [<li key=1 >1</li>, <li key=2 >2</li>, <li key=3 >3</li>, ....]
 return (    
   isLoading ?
         <Loading/>

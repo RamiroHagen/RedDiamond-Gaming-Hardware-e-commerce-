@@ -14,18 +14,30 @@ export const CartContextProvider = ({children})=> {
     const addToCart = (newProduct)=>{
         // localStorage.setItem('cartList', cartList)
         // manejar con base de dato ? 
+        const idx = cartList.findIndex(prod => newProduct. id === prod.id) 
+
+        if (idx === -1) {
+            setCartList([
+                ...cartList,
+                newProduct
+            ])
+        }else{
+            cartList[idx].cantidad = cartList[idx].cantidad + newProduct.cantidad
+            setCartList([ ... cartList ])
+        }
         
         // agregar logica de producto repetido
-        setCartList([
-            ...cartList,
-            newProduct
-        ])
+
     }
 
     // catidad total de productos
+    const cantidadTotal = () => cartList.reduce((total, obProducto) => total += obProducto.cantidad, 0)
     // precio total de la compra
+    const precioTotal = ()=> cartList.reduce((total, obProducto) => total += (obProducto.cantidad * obProducto.price), 0)
     // eliminar por item
-
+    const eliminarProducto = (pid)=>{
+        setCartList(cartList.filter(prod => prod.id !== pid))
+    }
     // vaciarCarrtio
     const vaciarCarrito = () => {
         setCartList([])
@@ -36,7 +48,10 @@ export const CartContextProvider = ({children})=> {
             // estado y func inyectados
             cartList,
             addToCart,
-            vaciarCarrito
+            vaciarCarrito,
+            cantidadTotal,
+            precioTotal,
+            eliminarProducto
        }}>
             {children}
        </CartContext.Provider>
