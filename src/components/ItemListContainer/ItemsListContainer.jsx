@@ -3,7 +3,6 @@ import { Link, useParams} from "react-router-dom"
 import { ItemList } from "../ItemList/ItemList"
 import './ItemListContainer.css'
 import { Categorias } from "../Categorias/Categorias"
-import { RuteoContainer } from "../RuteoContainer/RuteoContainer"
 import { Loading } from "../Loading/Loading"
 import { collection, doc, getDoc, getDocs, getFirestore, limit, orderBy, query, where } from 'firebase/firestore'
 
@@ -44,12 +43,17 @@ return (
   isLoading ?
         <Loading/>
     :
-        <div style={{display: "grid", gridTemplateColumns: '30% 65%', margin: '5vw',}}>  
-            < Categorias />
-        
-            < ItemList productos={productos} />
+    <>
+        <div className='Secciones'>
+            <h2 style={{color: 'red'}}>PRODUCTOS</h2>
         </div>
         
+        <div style={{display: "grid", gridTemplateColumns: '30% 65%', margin: '5vw',}}>  
+            < Categorias />
+
+            < ItemList productos={productos} />
+        </div>
+    </>    
    )
 }
 

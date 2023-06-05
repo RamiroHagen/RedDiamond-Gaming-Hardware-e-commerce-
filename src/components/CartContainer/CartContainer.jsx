@@ -101,6 +101,9 @@ export const CartContainer = () => {
     
   return (
     <div>
+        <div className='Secciones'>
+            <h2 style={{color: 'red'}}>CARRITO DE COMPRAS</h2>
+        </div>
         { cartList.length !== 0 ?
         <>
         {cartList.map(product =>(
@@ -124,30 +127,43 @@ export const CartContainer = () => {
 
             <h2 className='precioTotal'>Total: ${precioTotal()}</h2>
 
-            <form onSubmit={generarOrden}> 
-                <input 
-                    type='text' 
-                    name="name" 
-                    onChange={handleOnChange}
-                    value={dataForm.name} 
-                    placeholder="ingrese el nombre" 
-                /> 
-                <input 
-                    type='text' 
-                    name="phone" 
-                    onChange={handleOnChange}
-                    value={dataForm.phone} 
-                    placeholder="ingrese el tel " 
-                /> 
-                <input 
-                    type='text' 
-                    name="email" 
-                    onChange={handleOnChange}
-                    value={dataForm.email} 
-                    placeholder="ingrese el email" 
-                /> 
+            <div className='Secciones'>
+                <h2 style={{color: 'red'}}>ORDEN DE COMPRA</h2>
+            </div>
 
-                <button className="btn btn-outline-danger">Generar Orden de Compra</button>
+            <form onSubmit={generarOrden}>
+                <div className='d-flex row justify-content-center'>
+                    <input className='inputOrden'
+                        type='text' 
+                        name="name" 
+                        onChange={handleOnChange}
+                        value={dataForm.name} 
+                        placeholder="ingrese su nombre" 
+                    /> 
+                    <input className='inputOrden'
+                        type='text' 
+                        name="phone" 
+                        onChange={handleOnChange}
+                        value={dataForm.phone} 
+                        placeholder="ingrese su celular" 
+                    /> 
+                    <input className='inputOrden'
+                        type='text' 
+                        name="email" 
+                        onChange={handleOnChange}
+                        value={dataForm.email} 
+                        placeholder="ingrese su email" 
+                    /> 
+                    <input className='inputOrden'
+                        type='text' 
+                        name="email" 
+                        onChange={handleOnChange}
+                        value={dataForm.email} 
+                        placeholder="ingrese nuevamente su email" 
+                    /> 
+
+                    <button className="btn btn-outline-danger btnOrden">Generar Orden de Compra</button>
+                </div> 
             </form>
       </>
 

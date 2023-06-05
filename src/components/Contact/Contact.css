@@ -1,0 +1,25 @@
+.inputContacto{
+    width: 60%;
+    height: 50px;
+    border-radius: 5px;
+    margin: 10px;
+    margin-top: 35px;
+}
+
+.btnContacto{
+    width: 25%;
+    height: 50px;
+    margin-top: 8vh;
+    margin-bottom: 8vh;
+}
+
+.contactForm{
+    display: flex;
+    justify-content: center !important;
+    align-items: center !important;
+    margin-left: 15%;
+    margin-right: 15%;
+    margin-top: 5%;
+    background-color: rgb(54, 54, 54);
+    border-radius: 5px;
+}

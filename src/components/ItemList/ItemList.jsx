@@ -6,7 +6,7 @@ import { Categorias } from "../Categorias/Categorias"
 const ItemList = ({productos}) =>{
   return(
 
-    <div>
+    <div className="productos">
       {productos.map( producto => 
         <Item key={producto.id} producto={producto}/>
       )}  

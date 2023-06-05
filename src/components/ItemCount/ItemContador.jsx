@@ -8,7 +8,7 @@ const ItemContador = ({inital=1, stock=5, onAdd }) => {
     return (
     <>
         <button className='button-contador' onClick={sumaContador}> + </button>
-        <label>{counter}</label>
+        <label className='button-contador'>{counter}</label>
         <button className='button-contador' onClick={restaContador}> - </button>
 
         <button className='agregarCarritoText' onClick={() => {onAdd(counter)}}>Agregar al Carrito</button>
